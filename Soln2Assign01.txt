@@ -1,0 +1,303 @@
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ mkdir Soln2
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ d Soln2/
+d: command not found
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ cd Soln2
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ touch data.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ vi data.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ head -10 data.txt
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ cat data.txt
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ tail -5 data.txt
+32
+33
+34
+35
+
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ vi data.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ tail -5 data.txt
+32
+33
+34
+35
+
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ tail -5 data.txt
+32
+33
+34
+35
+
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ tail -6 data.txt
+31
+32
+33
+34
+35
+
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ cat > numbers.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ head -20 numbers.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ tail -3 numbers.txt
+18
+19
+20abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ cat >> numbers.txt
+21
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ cat numbers.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+2021
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ cat  > input.txt
+Hello Cdac ...
+
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ tr [:lower:] [:upper:] input.txt
+tr: extra operand ‘input.txt’
+Try 'tr --help' for more information.
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ cat input.txt | tr [:lower:] [:upper:] input.txt
+tr: extra operand ‘input.txt’
+Try 'tr --help' for more information.
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ cat input.txt | tr [:lower:] [:upper:]
+HELLO CDAC ...
+
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ cat input.txt | tr [:upper:] [:lower:] | mv input.txt output.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ tree
+.
+├── data.txt
+├── numbers.txt
+└── output.txt
+
+0 directories, 3 files
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ cd ..
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ cd Soln2
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ cat > duplicate.txt
+aa
+bb
+cc
+dd
+ee
+ff
+gg
+hh
+ii
+jj
+kk
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ cat duplicate.txt
+aa
+bb
+cc
+dd
+ee
+ff
+gg
+hh
+ii
+jj
+kk
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ cat duplicate.txt  uniq
+aa
+bb
+cc
+dd
+ee
+ff
+gg
+hh
+ii
+jj
+kk
+cat: uniq: No such file or directory
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ cat duplicate.txt | uniq
+aa
+bb
+cc
+dd
+ee
+ff
+gg
+hh
+ii
+jj
+kk
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ cat >> duplicate.txt
+aa
+bb
+cc
+dd
+ee
+ff
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ cat duplicate.txt
+aa
+bb
+cc
+dd
+ee
+ff
+gg
+hh
+ii
+jj
+kk
+aa
+bb
+cc
+dd
+ee
+ff
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ uniq duplicate.txt
+aa
+bb
+cc
+dd
+ee
+ff
+gg
+hh
+ii
+jj
+kk
+aa
+bb
+cc
+dd
+ee
+ff
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ uniq -u duplicate.txt
+aa
+bb
+cc
+dd
+ee
+ff
+gg
+hh
+ii
+jj
+kk
+aa
+bb
+cc
+dd
+ee
+ff
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ cat > fruit.txt
+mango
+mango
+banana
+banana
+grapes
+grapes
+water,elon
+water,elon
+kiwiabhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ cat fruit.txt
+mango
+mango
+banana
+banana
+grapes
+grapes
+water,elon
+water,elon
+kiwiabhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ uniq fruit.txt
+mango
+banana
+grapes
+water,elon
+kiwi
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$ uniq -c fruit.txt
+      2 mango
+      2 banana
+      2 grapes
+      2 water,elon
+      1 kiwi
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/Soln2$
+
+
+
+

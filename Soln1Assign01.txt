@@ -1,0 +1,241 @@
+abhirock@LAPTOP-ATPK6PV9:~$ ls
+Abhinandan  Day2.sh  Day20.sh  Dynasty  KuruDynasty  Shell  day1.txt  fa  student.txt  test.sh
+abhirock@LAPTOP-ATPK6PV9:~$ mkdir CDACMarch24
+abhirock@LAPTOP-ATPK6PV9:~$ cd CDACMarch24
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24$ mkdir LinuxAssignment
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24$ cd LinuxAssignment
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ touch file1.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ cat file1.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ mkdir docs
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ cp file1.txt docs
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ cd docs
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ cd docs/
+-bash: cd: docs/: No such file or directory
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ ls
+file1.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ mv fil1.txt file2.txt
+mv: cannot stat 'fil1.txt': No such file or directory
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ mv file1.txt file2.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ ls
+file2.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ chmod 744 file2.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ ls -l
+total 0
+-rwxr--r-- 1 abhirock abhirock 0 Mar  9 10:08 file2.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ chmod +rwx file2.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ ls -l
+total 0
+-rwxr-xr-x 1 abhirock abhirock 0 Mar  9 10:08 file2.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ chmod 744 file2.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ ls
+file2.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ ls -l
+total 0
+-rwxr--r-- 1 abhirock abhirock 0 Mar  9 10:08 file2.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ chown  -c
+chown: missing operand
+Try 'chown --help' for more information.
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ chown
+chown: missing operand
+Try 'chown --help' for more information.
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ chown  file2.txt
+chown: missing operand after ‘file2.txt’
+Try 'chown --help' for more information.
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ chown abhirock file2.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ ls -l
+total 0
+-rwxr--r-- 1 abhirock abhirock 0 Mar  9 10:08 file2.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ cd ..
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ ls
+docs  file1.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ ls *.txt
+file1.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ ls *.txt -a
+file1.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ ls *.txt -R
+file1.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ ls -R *.txt
+file1.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ find . -name "*.txt"
+./docs/file2.txt
+./file1.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ grep "Hello"
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ cd ..
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24$ sudo apt install greap
+[sudo] password for abhirock:
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package greap
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24$ ls
+LinuxAssignment
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24$ cd LinuxAssignment
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ cd docs
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ ls
+file2.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ grep -l Hello file2.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ cat > file2.txt
+Hello Ubuntoo ....abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ grep -l file2.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ cat file2.txt
+Hello Ubuntoo ....abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ date
+Sat Mar  9 10:31:45 IST 2024
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ hostname
+LAPTOP-ATPK6PV9
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ cd ..
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ zip -v
+
+Command 'zip' not found, but can be installed with:
+
+sudo apt install zip
+
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ sudo apt install zip
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  unzip
+The following NEW packages will be installed:
+  unzip zip
+0 upgraded, 2 newly installed, 0 to remove and 1 not upgraded.
+Need to get 336 kB of archives.
+After this operation, 1231 kB of additional disk space will be used.
+Do you want to continue? [Y/n]
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 unzip amd64 6.0-25ubuntu1.2 [169 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal/main amd64 zip amd64 3.0-11build1 [167 kB]
+Fetched 336 kB in 2s (187 kB/s)
+Selecting previously unselected package unzip.
+(Reading database ... 32754 files and directories currently installed.)
+Preparing to unpack .../unzip_6.0-25ubuntu1.2_amd64.deb ...
+Unpacking unzip (6.0-25ubuntu1.2) ...
+Selecting previously unselected package zip.
+Preparing to unpack .../zip_3.0-11build1_amd64.deb ...
+Unpacking zip (3.0-11build1) ...
+Setting up unzip (6.0-25ubuntu1.2) ...
+Setting up zip (3.0-11build1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ zip -v
+Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+Currently maintained by E. Gordon.  Please send bug reports to
+the authors using the web page at www.info-zip.org; see README for details.
+
+Latest sources and executables are at ftp://ftp.info-zip.org/pub/infozip,
+as of above date; see http://www.info-zip.org/ for other sites.
+
+Compiled with gcc 6.3.0 20170415 for Unix (Linux ELF).
+
+Zip special compilation options:
+        USE_EF_UT_TIME       (store Universal Time)
+        BZIP2_SUPPORT        (bzip2 library version 1.0.8, 13-Jul-2019)
+            bzip2 code and library copyright (c) Julian R Seward
+            (See the bzip2 license for terms of use)
+        SYMLINK_SUPPORT      (symbolic links supported)
+        LARGE_FILE_SUPPORT   (can read and write large files on file system)
+        ZIP64_SUPPORT        (use Zip64 to store large files in archives)
+        UNICODE_SUPPORT      (store and read UTF-8 Unicode paths)
+        STORE_UNIX_UIDs_GIDs (store UID/GID sizes/values using new extra field)
+        UIDGID_NOT_16BIT     (old Unix 16-bit UID/GID extra field not used)
+        [encryption, version 2.91 of 05 Jan 2007] (modified for Zip 3)
+
+Encryption notice:
+        The encryption code of this program is not copyrighted and is
+        put in the public domain.  It was originally written in Europe
+        and, to the best of our knowledge, can be freely distributed
+        in both source and object forms from any country, including
+        the USA under License Exception TSU of the U.S. Export
+        Administration Regulations (section 740.13(e)) of 6 June 2002.
+
+Zip environment options:
+             ZIP:  [none]
+          ZIPOPT:  [none]
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ zip -r docs.zip docs
+  adding: docs/ (stored 0%)
+  adding: docs/file2.txt (stored 0%)
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ ls
+docs  docs.zip  file1.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ man unzip
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ unzip -z docs.zip docs1
+Archive:  docs.zip
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ ls
+docs  docs.zip  file1.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ zip -r docs1.zip docs1
+        zip warning: name not matched: docs1
+
+zip error: Nothing to do! (try: zip -r docs1.zip . -i docs1)
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ zip -r docs1.zip docs
+  adding: docs/ (stored 0%)
+  adding: docs/file2.txt (stored 0%)
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ ls
+docs  docs.zip  docs1.zip  file1.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ mkdir docs1
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ ls
+docs  docs.zip  docs1  docs1.zip  file1.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ ls -l -a
+total 0
+drwxr-xr-x 1 abhirock abhirock 4096 Mar  9 10:40 .
+drwxr-xr-x 1 abhirock abhirock 4096 Mar  9 10:03 ..
+drwxr-xr-x 1 abhirock abhirock 4096 Mar  9 10:10 docs
+-rw-r--r-- 1 abhirock abhirock  334 Mar  9 10:36 docs.zip
+drwxr-xr-x 1 abhirock abhirock 4096 Mar  9 10:40 docs1
+-rw-r--r-- 1 abhirock abhirock  334 Mar  9 10:40 docs1.zip
+-rw-r--r-- 1 abhirock abhirock    0 Mar  9 10:05 file1.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ tree
+.
+├── docs
+│   └── file2.txt
+├── docs.zip
+├── docs1
+├── docs1.zip
+└── file1.txt
+
+2 directories, 4 files
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ unzip docs.zip -d docs1
+Archive:  docs.zip
+   creating: docs1/docs/
+ extracting: docs1/docs/file2.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ tree
+.
+├── docs
+│   └── file2.txt
+├── docs.zip
+├── docs1
+│   └── docs
+│       └── file2.txt
+├── docs1.zip
+└── file1.txt
+
+3 directories, 5 files
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ cd docs
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ ls
+file2.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ cd ..
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ ls
+docs  docs.zip  docs1  docs1.zip  file1.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ cat file1.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ cd file1.txt
+-bash: cd: file1.txt: Not a directory
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ ls
+docs  docs.zip  docs1  docs1.zip  file1.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ cat > file1.txt
+Hello Ubuntu....
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ cat file1.txt
+Hello Ubuntu....
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ cd docs
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ vi file2.txt
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ cat file2.txt
+Hello Ubuntoo welcome to cdac ....
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment/docs$ cd ..
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$ tree
+.
+├── docs
+│   └── file2.txt
+├── docs.zip
+├── docs1
+│   └── docs
+│       └── file2.txt
+├── docs1.zip
+└── file1.txt
+
+3 directories, 5 files
+abhirock@LAPTOP-ATPK6PV9:~/CDACMarch24/LinuxAssignment$
